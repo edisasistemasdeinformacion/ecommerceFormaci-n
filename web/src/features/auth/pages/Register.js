@@ -1,5 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
+import { inputField } from "../styles/Register";
 
 const registerFormInterface = {
   usuario: {
@@ -28,7 +29,6 @@ const Register = () => {
   };
 
   const canRegisterUser = () => {
-    console.log("gola");
     let allOk = 0;
 
     Object.keys(formData).forEach((atr) => {
@@ -45,10 +45,25 @@ const Register = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
       <h1>Bienvenido a nuestro ecommerce</h1>
       <p>Completa el formulario de registro para poder acceder a la web</p>
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          width: "auto",
+          marginTop: "2rem",
+        }}
+      >
         <TextField
           label="Usuario"
           variant="outlined"
@@ -56,6 +71,7 @@ const Register = () => {
           onChange={(e) => {
             validateFormInput("usuario", e.target.value);
           }}
+          sx={inputField}
         />
         <TextField
           label="Email"
@@ -64,6 +80,7 @@ const Register = () => {
           onChange={(e) => {
             validateFormInput("email", e.target.value);
           }}
+          sx={inputField}
         />
         <TextField
           label="Password"
@@ -73,6 +90,7 @@ const Register = () => {
           onChange={(e) => {
             validateFormInput("password", e.target.value);
           }}
+          sx={inputField}
         />
       </Box>
       <Button variant="contained" disabled={!canRegisterUser()}>
