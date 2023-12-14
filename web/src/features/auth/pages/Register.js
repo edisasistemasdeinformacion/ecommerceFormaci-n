@@ -37,11 +37,7 @@ const Register = () => {
       }
     });
 
-    if (allOk === Object.keys(formData).length) {
-      return true;
-    } else {
-      return false;
-    }
+    return allOk === Object.keys(formData).length;
   };
 
   return (
