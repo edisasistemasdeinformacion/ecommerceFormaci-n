@@ -3,7 +3,7 @@ import { Avatar, Box } from "@mui/material";
 const Navbar = () => {
   return (
     <Box sx={{ width: "100%" }}>
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: "#87C4FF",
           display: "flex",
@@ -18,7 +18,7 @@ const Navbar = () => {
           alt="Remy Sharp"
           src="https://mui.com/static/images/avatar/1.jpg"
         />
-      </Box>
+      </Box> */}
     </Box>
   );
 };
